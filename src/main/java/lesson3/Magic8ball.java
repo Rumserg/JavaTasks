@@ -1,5 +1,9 @@
 package lesson3;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
 public class Magic8ball {
 
     /**
@@ -31,12 +35,38 @@ public class Magic8ball {
      */
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Ask your question");
+        String question = s.nextLine();
+
         System.out.println(getResult());
     }
 
     public static String getResult() {
-        //Написать реализацию метода тут
-        return "";
+        ArrayList<String> phrases = new ArrayList<String>();
+        phrases.add("As I see it, yes");
+        phrases.add("Ask again later");
+        phrases.add("Better not tell you now");
+        phrases.add("Cannot predict now");
+        phrases.add("Concentrate and ask again");
+        phrases.add("Don’t count on it");
+        phrases.add("It is certain");
+        phrases.add("It is decidedly so");
+        phrases.add("Most likely");
+        phrases.add("My reply is no");
+        phrases.add("My sources say no");
+        phrases.add("Outlook good");
+        phrases.add("Outlook not so good");
+        phrases.add("Reply hazy try again");
+        phrases.add("Signs point to yes");
+        phrases.add("Very doubtful");
+        phrases.add("Without a doubt");
+        phrases.add("Yes");
+        phrases.add("Yes, definitely");
+        phrases.add("You may rely on it");
+
+        Random random = new Random();
+        return phrases.get(random.nextInt(phrases.size()));
     }
 
 }

@@ -1,4 +1,7 @@
 package lesson3;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomLesson {
 
@@ -14,7 +17,18 @@ public class RandomLesson {
     }
 
     public static String getRandomPhrase() {
-        // Писать код тут
-        return "";
+        ArrayList<String> phrases = new ArrayList<String>();
+        phrases.add("phrase 1");
+        phrases.add("phrase 2");
+        phrases.add("phrase 3");
+        phrases.add("phrase 4");
+
+        //сначала нашел такой метод рандома
+        //int num = ThreadLocalRandom.current().nextInt(0,phrases.size());
+        //return phrases.get(num);
+
+        Random random = new Random();
+        return phrases.get(random.nextInt(phrases.size()));
     }
+
 }
