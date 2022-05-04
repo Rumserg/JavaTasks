@@ -20,8 +20,8 @@ public class LoopSquare {
      */
     // если делать 10 строчек, то квадрат не очень получается
     public static void main(String[] args) {
-            for(int i = 10;i>0;i--) {
-                System.out.println("* * * * * * * * * *");
-            }
+        for(int i = 10; i > 0; i--) {
+            System.out.println("* * * * * * * * * *");
+        }
     }
 }

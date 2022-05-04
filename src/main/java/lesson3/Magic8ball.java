@@ -35,15 +35,22 @@ public class Magic8ball {
      */
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("Ask your question");
-        String question = s.nextLine();
-
-        System.out.println(getResult());
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Ask your question");
+            String input = scanner.nextLine();
+            if (input.isEmpty()) {
+                System.out.print("Your question line is empty.");
+            } else {
+                System.out.println(getRandomPhrase());
+                break;
+            }
+        }
     }
 
-    public static String getResult() {
-        ArrayList<String> phrases = new ArrayList<String>();
+    public static String getRandomPhrase() {
+        ArrayList<String> phrases = new ArrayList<>();
+
         phrases.add("As I see it, yes");
         phrases.add("Ask again later");
         phrases.add("Better not tell you now");
@@ -66,7 +73,7 @@ public class Magic8ball {
         phrases.add("You may rely on it");
 
         Random random = new Random();
+
         return phrases.get(random.nextInt(phrases.size()));
     }
-
 }
