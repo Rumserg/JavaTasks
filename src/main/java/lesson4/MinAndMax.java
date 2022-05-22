@@ -1,6 +1,7 @@
 package lesson4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,12 +25,22 @@ public class MinAndMax {
         System.out.println(maxNumber(700,614,893,900,590));
 
     }
-    public static int minNumber(int a,int b,int c,int d) {
-
-        return 0;
+    public static int minNumber(int a, int b, int c, int d) {
+        ArrayList <Integer> numbers = new ArrayList<>();
+        numbers.add(a);
+        numbers.add(b);
+        numbers.add(c);
+        numbers.add(d);
+        return Collections.min(numbers);
     }
-     public static int maxNumber(int a, int b, int c, int d, int e) {
-
-         return 0;
-     }
+    public static int maxNumber(int a, int b, int c, int d, int e) {
+        ArrayList <Integer> numbers = new ArrayList<>();
+        numbers.add(a);
+        numbers.add(b);
+        numbers.add(c);
+        numbers.add(d);
+        numbers.add(e);
+        Collections.sort(numbers);
+        return numbers.get(numbers.size() - 1);
+    }
 }

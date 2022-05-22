@@ -13,7 +13,14 @@ public class PrintNtimes {
     }
 
     public static String print(String phrase,int number){
+        StringBuilder builder = new StringBuilder();
 
-        return "";
+        for (int i = 0; i < number; i++) {
+            builder.append(phrase + " ");
+        }
+
+        String result = builder.toString();
+
+        return result;
     }
 }

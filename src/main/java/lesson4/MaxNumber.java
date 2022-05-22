@@ -1,5 +1,7 @@
 package lesson4;
 
+import java.util.Scanner;
+
 /**
  * ВАРИАНТ 1:
  * Написать метод, принимающий в качестве параметра два числа.
@@ -16,4 +18,17 @@ package lesson4;
  */
 
 public class MaxNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the first number");
+        int numberOne = scanner.nextInt();
+        System.out.println("enter the second number");
+        int numberTwo = scanner.nextInt();
+            if (numberOne > numberTwo) {
+                System.out.println("the largest number is " + numberOne);
+            } else {
+                System.out.println("the largest number is " + numberTwo);
+            }
+        System.out.println("the largest number with Math is " + Math.max(numberOne, numberTwo));
+    }
 }
