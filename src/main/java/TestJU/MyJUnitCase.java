@@ -3,7 +3,7 @@ package TestJU;
 import java.util.ArrayList;
 
 public class MyJUnitCase {
-    public static String alphabet() {
+    public ArrayList alphabet() {
         ArrayList<String> letters = new ArrayList<>();
         letters.add("a");
         letters.add("b");
@@ -32,6 +32,6 @@ public class MyJUnitCase {
         letters.add("y");
         letters.add("z");
 
-        return System.out.println(letters.size());
+        return letters;
     }
 }
