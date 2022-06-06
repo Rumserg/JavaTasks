@@ -1,10 +1,7 @@
 package Lesson5;
 
-import TestJU.MyJUnitCase;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AnimalTest {
 
@@ -27,8 +24,7 @@ class AnimalTest {
     void newDogTest() {
         Animal doggy = new Dog();
         String expected = "Bark!";
-        String actual = Kitty.doSound();
+        String actual = doggy.doSound();
         Assert.assertEquals(expected, actual);
     }
-
 }
