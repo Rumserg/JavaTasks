@@ -19,16 +19,20 @@ import java.util.Scanner;
 
 public class MaxNumber {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("enter the first number");
-        int numberOne = scanner.nextInt();
-        System.out.println("enter the second number");
-        int numberTwo = scanner.nextInt();
-            if (numberOne > numberTwo) {
-                System.out.println("the largest number is " + numberOne);
-            } else {
-                System.out.println("the largest number is " + numberTwo);
-            }
-        System.out.println("the largest number with Math is " + Math.max(numberOne, numberTwo));
+        System.out.println(maxNumber(10, 26));
+        System.out.println(maxNumberMath(104, 201));
+    }
+    public static int maxNumber(int a, int b) {
+        int max;
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        return max;
+    }
+
+    public static int maxNumberMath(int a, int b) {
+        return Math.max(a, b);
     }
 }
