@@ -25,6 +25,8 @@ public class MinAndMax {
     public static void main(String[] args) {
         System.out.println(minNumber(700,654,908,7));
         System.out.println(maxNumber(700,614,893,900,590));
+        System.out.println(minNumberFor(810,321,1005,504));
+        System.out.println(maxNumberFor(510,426,105,804));
 
     }
     public static int minNumber(int a, int b, int c, int d) {
@@ -44,5 +46,31 @@ public class MinAndMax {
         numbers.add(e);
         Collections.sort(numbers);
         return numbers.get(numbers.size() - 1);
+    }
+    public static int minNumberFor(int a, int b, int c, int d) {
+        ArrayList <Integer> numbers = new ArrayList<>();
+        numbers.add(a);
+        numbers.add(b);
+        numbers.add(c);
+        numbers.add(d);
+        int min = numbers.get(0);
+        for (int num : numbers) {
+            if(min > num)
+                min = num;
+        }
+        return min;
+    }
+    public static int maxNumberFor(int a, int b, int c, int d) {
+        ArrayList <Integer> numbers = new ArrayList<>();
+        numbers.add(a);
+        numbers.add(b);
+        numbers.add(c);
+        numbers.add(d);
+        int max = numbers.get(0);
+        for (int num : numbers) {
+            if(max < num)
+                max = num;
+        }
+        return max;
     }
 }
