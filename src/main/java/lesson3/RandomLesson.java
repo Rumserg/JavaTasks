@@ -23,10 +23,10 @@ public class RandomLesson {
         ArrayList<String> phrases = new ArrayList<>();
         Random random = new Random();
 
-        phrases.add("phrase 1");
-        phrases.add("phrase 2");
-        phrases.add("phrase 3");
-        phrases.add("phrase 4");
+        phrases.add("фраза 1");
+        phrases.add("фраза 2");
+        phrases.add("фраза 3");
+        phrases.add("фраза 4");
 
         return phrases.get(random.nextInt(phrases.size()));
     }

@@ -13,12 +13,19 @@ class MinAndMaxTest {
 
     @Test
     void minNumberTest() {
-        //MinAndMax minNumber = new minNumber(321, 400, 500, 652);
 
-        //int actual = Collections.min(minNumber);
-        //int expected = 321;
+        int actual = MinAndMax.minNumber(321, 400, 500, 698);
+        int expected = 321;
 
-        //Assert.assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    void maxNumberTest() {
+        int actual = MinAndMax.maxNumber(321, 400, 500, 698, 594);
+        int expected = 698;
+
+        Assert.assertEquals(actual, expected);
     }
 
 }

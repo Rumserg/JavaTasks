@@ -10,7 +10,7 @@ public class SeleniumExample {
     static WebDriver webDriver;
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","/Users/vtorov/Downloads/chromedriver_2");
+        System.setProperty("webdriver.chrome.driver", "C:/chromedriver/103.exe");
         webDriver = new ChromeDriver();
         webDriver.get("https://www.novostroy.su");
         webDriver.manage().window().maximize();
