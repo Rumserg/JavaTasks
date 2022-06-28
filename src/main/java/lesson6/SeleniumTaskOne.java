@@ -36,7 +36,7 @@ public class SeleniumTaskOne {
 
         Thread.sleep(1000);
 
-        WebElement targetSearchCapital = webDriver.findElement(By.xpath("//li[@class='checkbox-btn']"));
+        WebElement targetSearchCapital = webDriver.findElement(By.xpath("//label[@class='checkbox-btn__label' and @for='is_bail']"));
         targetSearchCapital.click(); //это конечно работает, но только с первым чекбоксом
 
         Thread.sleep(1000);
